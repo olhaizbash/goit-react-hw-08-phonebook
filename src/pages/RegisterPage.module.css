@@ -1,0 +1,43 @@
+.data_container {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  padding-top: 60px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+label {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 400px;
+  height: 30px;
+}
+
+.button {
+  width: 410px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: rgb(48, 46, 46);
+  text-decoration: underline;
+}
+a .login {
+  font-size: 20px;
+  margin: 0;
+  text-decoration: underline;
+}
+.title {
+  font-size: 20px;
+  margin: 0;
+}

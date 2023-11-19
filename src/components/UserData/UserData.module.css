@@ -1,0 +1,22 @@
+.user_container {
+  display: flex;
+  margin-left: auto;
+}
+.title {
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.buttonLogOut {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.buttonLogOut:hover,
+.buttonLogOut:focus {
+  cursor: pointer;
+  text-decoration: none;
+}

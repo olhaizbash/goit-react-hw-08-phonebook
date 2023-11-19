@@ -1,0 +1,33 @@
+.data_container {
+  display: flex;
+  padding-top: 60px;
+  padding-left: 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+label {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 400px;
+  height: 30px;
+}
+
+.button {
+  width: 410px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: rgb(48, 46, 46);
+  text-decoration: underline;
+}
