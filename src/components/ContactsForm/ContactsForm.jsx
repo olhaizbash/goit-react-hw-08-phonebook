@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact, fetchContacts } from 'redux/contactsReduser';
 import css from './ContactForm.module.css';
+import { selectContact } from 'redux/selectors';
 
 const ContactsForm = () => {
   const {
@@ -13,9 +14,15 @@ const ContactsForm = () => {
   } = useForm();
 
   const dispatch = useDispatch();
+  const contacts = useSelector(selectContact);
 
   const onSubmit = data => {
     console.log(data);
+    if (contacts.filter(contacts => contacts.name === data.name).length > 0) {
+      window.alert(`${data.name} is already in contacts`);
+      reset();
+      return;
+    }
     dispatch(addContact(data));
     reset();
   };
